@@ -57,7 +57,6 @@ function cron_del_table() {
             $c->setUrl('http://tieba.baidu.com/f/commit/thread/delete');
             $c->addcookie('BDUSS='.$bduss);
             $res = $c->post($option);
-            var_dump($res);
         }
     }
 }
