@@ -2,7 +2,7 @@
 /*
 Plugin Name: 自动删帖
 Version: 0.1
-Plugin URL: https://www.ddnpc.com
+Plugin URL: https://github.com/Instrye/del_table
 Description: 根据关键词进行删帖
 Author: Instrye
 Author Email: instrye@gmail.com

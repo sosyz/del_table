@@ -4,14 +4,14 @@ function cron_del_table() {
     $s = unserialize(option::get('plugin_del_table'));
     $y = $m->query("SELECT * FROM `".DB_PREFIX."del_table`");
     while ($x = $m->fetch_array($y)) {
-        $bduss = misc::getCookie($x['pid']);
+        $bduss = $x['cookies'];
         $option = [
                 'kw' =>   $x['tieba'],
                 'fr'   =>   'index',
             ];
         $httpbuild = http_build_query($option);
         $c = new wcurl('http://tieba.baidu.com/f?' . $httpbuild);
-        $c->addcookie('BDUSS='.$bduss);
+        $c->addcookie($bduss);
         $data = $c->get();
         $preg = "/<li class=\" j_thread_list clearfix\" data-field='(.*?)'.*?<div class=\"threadlist_title pull_left j_th_tit \">.*?<a.*?>(.*?)<\/a>.*?<span class=\"tb_icon_author \".*?target=\"_blank\">(.*?)<\/a>.*?<div class=\"threadlist_abs threadlist_abs_onlyline \">(.*?)<\/div>/s"; 
         $pregtieba = '/tbs.*?"(.*?)".*?}.*?PageData.forum.*?id.*?:.*?([0-9]*),/s';
@@ -55,7 +55,7 @@ function cron_del_table() {
                 'tid'  =>  (string)$pinfo['id'],
             ];
             $c->setUrl('http://tieba.baidu.com/f/commit/thread/delete');
-            $c->addcookie('BDUSS='.$bduss);
+            $c->addcookie($bduss);
             $res = $c->post($option);
         }
     }
