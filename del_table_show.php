@@ -7,12 +7,13 @@ if (SYSTEM_PAGE == 'add') {
         msg('PID不存在');
     }
     $tieba = !empty($_POST['tieba']) ? addslashes(strip_tags($_POST['tieba'])) : msg('请输入贴吧');
+    $cookies = $_POST['cookies'] != null?$_POST['cookies']:'';
     $delkey = $_POST['delkey'] != null?$_POST['delkey']:'';
     $mustkey = $_POST['mustkey'] != null?$_POST['mustkey']:'';
     if(empty($delkey) && empty($mustkey)){
         msg('请至少选择一中删帖模式');
     }
-    $m->query("INSERT INTO `".DB_PREFIX."del_table` (`uid`, `pid`, `tieba`, `delkey`, `mustkey`) VALUES ('".UID."', '{$pid}', '{$tieba}', '{$delkey}', '{$mustkey}')");
+    $m->query("INSERT INTO `".DB_PREFIX."del_table` (`uid`, `pid`, `cookies`, `tieba`, `delkey`, `mustkey`) VALUES ('".UID."', '{$pid}', '{$cookies}', '{$tieba}', '{$delkey}', '{$mustkey}')");
     ReDirect(SYSTEM_URL . 'index.php?plugin=del_table&ok');
 } elseif (SYSTEM_PAGE == 'del') {
     $id = isset($_GET['id']) ? intval($_GET['id']) : msg('缺少ID');

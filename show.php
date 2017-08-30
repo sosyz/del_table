@@ -10,6 +10,7 @@
             <th>ID</th>
             <th>PID</th>
             <th style="width:20%">贴吧</th>
+            <th style="width:20%">Cookie</th>
             <th style="width:20%">删除关键词</th>
             <th style="width:20%">必须包含关键词</th>
             <th></th>
@@ -24,6 +25,7 @@
             <td><?php echo $v['id'] ?></td>
             <td><?php echo $v['pid'] ?></td>
             <td><?php echo $v['tieba'] ?></td>
+            <td><?php echo mb_substr($v['cookies'],0,20)?></td>
             <td><?php echo $v['delkey'] ?></td>
             <td><?php echo $v['mustkey'] ?></td>
             <td>
@@ -60,7 +62,12 @@
             <input type="text" name="tieba" class="form-control" id="tieba">
         </div>
         <br/>
-        <div id="delkey">
+        <div class="input-group">
+            <span class="input-group-addon">Cookies</span>
+            <input type="text" name="cookies" class="form-control" id="cookies">
+            <span class="input-group-addon">插件获取</span>
+        </div>
+        <br/>
         <div class="input-group">
             <span class="input-group-addon">删除关键词</span>
             <input type="text" name="delkey" class="form-control" id="delkey">
