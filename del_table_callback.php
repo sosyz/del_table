@@ -7,6 +7,7 @@ function callback_init() {
 `id`  int(255) NOT NULL AUTO_INCREMENT ,
 `uid`  int(255) NOT NULL ,
 `pid`  int(255) NOT NULL ,
+`cookies` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 `tieba`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 `delkey`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 `mustkey`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
