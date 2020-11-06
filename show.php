@@ -12,6 +12,7 @@
             <th style="width:20%">贴吧</th>
             <th style="width:20%">删除关键词</th>
             <th style="width:20%">必须包含关键词</th>
+            <th style="width:20%">白名单用户</th>
             <th></th>
         </tr>
     </thead>
@@ -26,6 +27,7 @@
             <td><?php echo $v['tieba'] ?></td>
             <td><?php echo $v['delkey'] ?></td>
             <td><?php echo $v['mustkey'] ?></td>
+            <td><?php echo $v['white'] ?></td>
             <td>
                 <a class="btn btn-default" href="index.php?plugin=del_table&amp;mod=del&amp;id=<?php echo $v['id'] ?>" title="删除">
                     <span class="glyphicon glyphicon-remove"></span>
@@ -72,6 +74,11 @@
             <input id="mustkey" type="text" name="mustkey" class="form-control">
         </div>
         <br/>
+        <div class="input-group">
+            <span class="input-group-addon">白名单用户</span>
+            <input id="white" type="text" name="white" class="form-control">
+        </div>
+        <br/>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -81,4 +88,5 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<br/><br/>作者：<a href="https://www.ddnpc.com" target="_blank">Instrye</a>
+<br/><br/>原作者：<a href="https://www.ddnpc.com" target="_blank">Instrye</a>
+<br/><br/>二改：<a href="https://github.com/sosyz/del_table" target="_blank">del_table</a>

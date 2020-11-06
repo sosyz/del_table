@@ -10,6 +10,7 @@ function callback_init() {
 `tieba`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 `delkey`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 `mustkey`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
+`white`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 PRIMARY KEY (`id`)
 )
 ENGINE=MyISAM

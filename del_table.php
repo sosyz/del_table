@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: 自动删帖
-Version: 0.1
-Plugin URL: https://www.ddnpc.com
+Version: 0.2
+Plugin URL: https://github.com/sosyz/del_table
 Description: 根据关键词进行删帖
-Author: Instrye
-Author Email: instrye@gmail.com
-Author URL: https://www.ddnpc.com
+Author: Sonui
+Author Email: 814146039@qq.com
+Author URL: https://github.com/sosyz/del_table
 For: V3.1+
 */
 if (!defined('SYSTEM_ROOT')) { die('Insufficient Permissions'); } 
